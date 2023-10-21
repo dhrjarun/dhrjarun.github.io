@@ -12,6 +12,7 @@
     "lint": "eslint ./src",
     "lint:fix": "eslint "
   },
+  "packageManager": "pnpm@8.7.6",
   "dependencies": {
     "@astrojs/tailwind": "^5.0.2",
     "astro": "^3.3.2",
