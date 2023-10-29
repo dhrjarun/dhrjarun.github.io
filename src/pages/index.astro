@@ -1,13 +1,18 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+// TODO
+// find font
+// fix .md quote problem
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<p class="text-sm p-3">WORK IN PROGRESS...</p>
-	</main>
+<Layout title="dhrjarun">
+  <Header />
+  <main class="container">
+    <p class="text-sm">
+      Hey, thanks for visiting! I haven't finished this site yet. Till then you can checkout my <a
+        href="/blog">blogs</a
+      >
+    </p>
+  </main>
 </Layout>
-
-<style>
-	
-</style>
