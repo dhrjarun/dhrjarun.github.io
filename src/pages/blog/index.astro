@@ -1,0 +1,25 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import Header from '../../components/Header.astro';
+
+const publishedBlogEntries = await getCollection('blog', ({ data }) => {
+  return data.draft !== true;
+});
+---
+
+<BaseLayout title="Posts">
+  <Header />
+  <main class="container">
+    <h1 class="pb-1.5">Blog</h1>
+
+    {
+      publishedBlogEntries.map((item) => (
+        <div>
+          <a href={`/blog/${item.slug}`}>{item.data.title}</a>{' '}
+          <span class="text-xs">[{item.data.publishDate}]</span>
+        </div>
+      ))
+    }
+  </main>
+</BaseLayout>
