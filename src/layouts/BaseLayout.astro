@@ -1,4 +1,6 @@
 ---
+import ShortcutBar from '../components/ShortcutBar.astro';
+
 type Props = {
   title: string;
 };
@@ -14,36 +16,37 @@ const { title } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate icon" type="image/x-icon" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
     <title>{title} - dhrjarun</title>
   </head>
-  <body>
+  <body class="py-4">
+    <ShortcutBar />
     <slot />
   </body>
 </html>
 <style is:global>
   :root {
-    --accent: 136, 58, 234;
-    --accent-light: 224, 204, 250;
-    --accent-dark: 49, 10, 101;
-    --accent-gradient: linear-gradient(
-      45deg,
-      rgb(var(--accent)),
-      rgb(var(--accent-light)) 30%,
-      white 60%
-    );
   }
-  html {
+  body {
     font-family: system-ui, sans-serif;
-    @apply bg-white dark:bg-slate-800 text-slate-800 dark:text-white;
+    @apply min-h-screen bg-white dark:bg-slate-800 text-slate-800 dark:text-white;
+  }
+
+  main {
+    @apply max-w-prose px-4 mx-auto;
   }
 
   a {
-    @apply underline;
+    @apply underline text-blue-500 dark:text-blue-300;
   }
 
   h1 {
-    @apply text-xl font-bold;
+    @apply text-xl sm:text-2xl font-bold leading-tight;
+  }
+
+  p {
+    padding: 0px;
   }
   /* .main-container {
         @apply w-full md:max-w-[670px] lg:max-w-[970px] mx-auto px-4 xl:max-w-[1170px]
