@@ -1,7 +1,6 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
-import Header from '../../components/Header.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
 
 const publishedBlogEntries = await getCollection('blog', ({ data }) => {
   return data.draft !== true;
@@ -9,15 +8,25 @@ const publishedBlogEntries = await getCollection('blog', ({ data }) => {
 ---
 
 <BaseLayout title="Posts">
-  <Header />
-  <main class="container">
-    <h1 class="pb-1.5">Blog</h1>
+  <main class="">
+    <div class="py-8">
+      <h1 class="pb-1.5">Writing</h1>
+    </div>
 
+    <h2>Recents</h2>
     {
       publishedBlogEntries.map((item) => (
-        <div>
+        <div class="space-y-3">
+          <span class="text-xs mr-4">
+            {item.data.publishDate
+              .toLocaleDateString('en-in', {
+                year: 'numeric',
+                month: '2-digit',
+                day: '2-digit',
+              })
+              .replaceAll('/', '-')}
+          </span>
           <a href={`/blog/${item.slug}`}>{item.data.title}</a>{' '}
-          <span class="text-xs">[{item.data.publishDate}]</span>
         </div>
       ))
     }

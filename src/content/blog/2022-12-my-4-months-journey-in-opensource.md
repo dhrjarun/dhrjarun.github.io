@@ -1,11 +1,10 @@
 ---
 title: My 4-months journey in opensource
-publishDate: Dec 29, 2022
+publishDate: 2022-12-29
 draft: false
 ---
 
-
-Once when I was new to web development, I read the codebase of [Chakra UI](https://github.com/chakra-ui/chakra-ui). That was the first time I ever read someone else code. The Second time I read the codebase of [style-dictionary](https://github.com/amzn/style-dictionary). I must say I learned a lot just by reading the codebase. Reading someone's code can teach you that no tutorial can. It's like learning from the artist by studying their art.
+Once when I was new to web, I read the codebase of [Chakra UI](https://github.com/chakra-ui/chakra-ui). That was the first time I ever read someone else code. The Second time I read the codebase of [style-dictionary](https://github.com/amzn/style-dictionary). I must say I learned a lot just by reading the codebase. Reading someone's code can teach you that no tutorial can. It's like learning from the artist by studying their art.
 
 That is why I wanted to get into the world of open source.
 

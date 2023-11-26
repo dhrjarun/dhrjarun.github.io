@@ -1,6 +1,6 @@
 ---
 title: Am I burnout?
-publishDate: October 22, 2023
+publishDate: 2023-10-22
 draft: false
 ---
 
