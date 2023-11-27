@@ -12,7 +12,7 @@ export async function getStaticPaths() {
 }
 // 2. For your template, you can get the entry directly from the prop
 const { entry } = Astro.props;
-const { Content } = await entry.render();
+const { Content, remarkPluginFrontmatter } = await entry.render();
 const { title, publishDate } = entry.data;
 ---
 
@@ -31,6 +31,7 @@ const { title, publishDate } = entry.data;
           }</span
         >
         <span>@dhrjarun</span>
+        <span>{remarkPluginFrontmatter.minutesRead}</span>
       </div>
     </div>
     <Content />
