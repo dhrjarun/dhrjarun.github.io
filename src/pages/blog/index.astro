@@ -13,22 +13,24 @@ const publishedBlogEntries = await getCollection('blog', ({ data }) => {
       <h1 class="pb-1.5">Writing</h1>
     </div>
 
-    <h2>Recents</h2>
-    {
-      publishedBlogEntries.map((item) => (
-        <div class="space-y-3">
-          <span class="text-xs mr-4">
-            {item.data.publishDate
-              .toLocaleDateString('en-in', {
-                year: 'numeric',
-                month: '2-digit',
-                day: '2-digit',
-              })
-              .replaceAll('/', '-')}
-          </span>
-          <a href={`/blog/${item.slug}`}>{item.data.title}</a>{' '}
-        </div>
-      ))
-    }
+    <h2 class="mb-3">Recents</h2>
+    <section class="space-y-2.5 sm:space-y-1">
+      {
+        publishedBlogEntries.map((item) => (
+          <div class="flex items-baseline flex-col sm:flex-row">
+            <p class="text-xs mr-4">
+              {item.data.publishDate
+                .toLocaleDateString('en-in', {
+                  year: 'numeric',
+                  month: '2-digit',
+                  day: '2-digit',
+                }).split('/').reverse().join('-')}
+              {}
+            </p>
+            <a href={`/blog/${item.slug}`}>{item.data.title}</a>{' '}
+          </div>
+        ))
+      }
+    </section>
   </main>
 </BaseLayout>

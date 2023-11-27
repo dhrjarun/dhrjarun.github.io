@@ -41,8 +41,13 @@ const { title } = Astro.props;
     @apply underline text-blue-500 dark:text-blue-300;
   }
 
+  h1,
+  h2,
+  h3 {
+    @apply font-bold;
+  }
   h1 {
-    @apply text-xl sm:text-2xl font-bold leading-tight;
+    @apply text-xl sm:text-2xl leading-tight;
   }
 
   p {
