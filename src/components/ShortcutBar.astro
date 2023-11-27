@@ -1,11 +1,17 @@
 ---
-import Logo from './Logo.astro'
+import Logo from './Logo.astro';
+import clsx from 'clsx';
 ---
 
 <div
-  class="fixed bottom-2 left-1/2 -translate-x-1/2 rounded-[4px] md:bottom-1/2 md:left-5 md:translate-x-0 md:-translate-y-1/2 px-3 py-3 flex items-center justify-center md:flex-col gap-4 bg-gray-200 dark:bg-gray-700"
+  data-shortcut
+  class={clsx(
+    'fixed bottom-2 left-1/2 -translate-x-1/2 md:bottom-1/2 md:left-5 md:translate-x-0 md:translate-y-1/2',
+    'px-3 py-3 flex items-center justify-center md:flex-col gap-4 rounded-[4px] transition-transform',
+    'bg-gray-200 dark:bg-gray-700'
+  )}
 >
-  <a href="/"><Logo /></a> 
+  <a href="/"><Logo /></a>
 
   <button id="themeToggle" aria-label="Change color mode">
     <svg
@@ -61,4 +67,21 @@ import Logo from './Logo.astro'
   };
 
   document.getElementById('themeToggle').addEventListener('click', handleToggleClick);
+
+  // scroll
+  let lastScroll = 0;
+  const hideOffset = 50;
+  const shortcutElm = document.querySelector('[data-shortcut]');
+  const handleScroll = () => {
+    let scrollY = window.scrollY || window.pageYOffset;
+
+    if (Math.abs(scrollY - lastScroll) > hideOffset) {
+      scrollY >= lastScroll
+        ? shortcutElm.classList.add('max-md:translate-y-14')
+        : shortcutElm.classList.remove('max-md:translate-y-14');
+
+      lastScroll = scrollY;
+    }
+  };
+  window.addEventListener('scroll', handleScroll);
 </script>
