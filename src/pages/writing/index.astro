@@ -2,14 +2,14 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
-const publishedBlogEntries = await getCollection('blog', ({ data }) => {
+const publishedBlogEntries = await getCollection('writing', ({ data }) => {
   return data.draft !== true;
 });
 ---
 
 <BaseLayout title="Posts">
   <main class="">
-    <div class="py-8">
+    <div class="pb-8">
       <h1 class="pb-1.5">Writing</h1>
     </div>
 
@@ -27,7 +27,7 @@ const publishedBlogEntries = await getCollection('blog', ({ data }) => {
                 }).split('/').reverse().join('-')}
               {}
             </p>
-            <a href={`/blog/${item.slug}`}>{item.data.title}</a>{' '}
+            <a href={`/writing/${item.slug}`}>{item.data.title}</a>{' '}
           </div>
         ))
       }
