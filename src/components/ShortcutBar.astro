@@ -1,45 +1,88 @@
 ---
-import Logo from './Logo.astro';
 import clsx from 'clsx';
+import Tooltip from './tooltip/tooltip.astro';
 ---
 
 <div
   data-shortcut
   class={clsx(
     'fixed bottom-2 left-1/2 -translate-x-1/2 md:bottom-1/2 md:left-5 md:translate-x-0 md:translate-y-1/2',
-    'px-3 py-3 flex items-center justify-center md:flex-col gap-4 rounded-[4px] transition-transform',
-    'bg-gray-200 dark:bg-gray-700'
+    'flex px-4 md:px-3 py-3 md:py-4 gap-4 items-center justify-center md:flex-col rounded-xl transition-transform',
+    ' border border-gray-300 dark:border-gray-600',
+    'bg-black/5 dark:bg-white/10 backdrop-blur-md md:backdrop-blur-sm text-gray-800 dark:text-gray-50;'
   )}
 >
-  <a href="/"><Logo /></a>
+  <Tooltip label="Home">
+    <a href="/" data-shortcut-item class="text-inherit dark:text-inherit">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="w-5 h-5"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21m0 0h4.5V3.545M12.75 21h7.5V10.75M2.25 21h1.5m18 0h-18M2.25 9l4.5-1.636M18.75 3l-1.5.545m0 6.205l3 1m1.5.5l-1.5-.5M6.75 7.364V3h-3v18m3-13.636l10.5-3.819"
+        ></path>
+      </svg>
+    </a>
+  </Tooltip>
 
-  <button id="themeToggle" aria-label="Change color mode">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke-width="1.5"
-      stroke="currentColor"
-      class="w-5 h-5"
-    >
-      <path
-        class="sun hidden dark:block"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
-      ></path>
-      <path
-        class="moon dark:hidden"
-        fill="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"
-      ></path>
-    </svg>
-  </button>
+  <Tooltip label="Toggle Color Mode">
+    <button data-shortcut-item id="themeToggle" aria-label="Toogle color mode">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="w-5 h-5"
+      >
+        <path
+          class="sun hidden dark:block"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
+        ></path>
+        <path
+          class="moon dark:hidden"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"
+        ></path>
+      </svg>
+    </button>
+  </Tooltip>
+
+  <Tooltip label="Quick Link">
+    <button data-shortcut-item>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="w-6 h-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"></path>
+      </svg>
+    </button>
+  </Tooltip>
 </div>
 
-<script is:inline>
+<style>
+  [data-shortcut-item] {
+    @apply text-gray-800 dark:text-gray-50;
+  }
+</style>
+
+<script>
   const theme = (() => {
     if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
       return localStorage.getItem('theme');
@@ -56,7 +99,7 @@ import clsx from 'clsx';
     document.documentElement.classList.add('dark');
   }
 
-  window.localStorage.setItem('theme', theme);
+  window.localStorage.setItem('theme', theme!);
 
   const handleToggleClick = () => {
     const element = document.documentElement;
@@ -66,7 +109,7 @@ import clsx from 'clsx';
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
   };
 
-  document.getElementById('themeToggle').addEventListener('click', handleToggleClick);
+  document.getElementById('themeToggle')?.addEventListener('click', handleToggleClick);
 
   // scroll
   let lastScroll = 0;
@@ -75,10 +118,11 @@ import clsx from 'clsx';
   const handleScroll = () => {
     let scrollY = window.scrollY || window.pageYOffset;
 
+    if (!shortcutElm) return;
     if (Math.abs(scrollY - lastScroll) > hideOffset) {
       scrollY >= lastScroll
-        ? shortcutElm.classList.add('max-md:translate-y-14')
-        : shortcutElm.classList.remove('max-md:translate-y-14');
+        ? shortcutElm.classList.add('max-md:translate-y-16')
+        : shortcutElm.classList.remove('max-md:translate-y-16');
 
       lastScroll = scrollY;
     }
