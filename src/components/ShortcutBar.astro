@@ -8,12 +8,12 @@ import Tooltip from './tooltip/tooltip.astro';
   class={clsx(
     'fixed bottom-2 left-1/2 -translate-x-1/2 md:bottom-1/2 md:left-5 md:translate-x-0 md:translate-y-1/2',
     'flex px-4 md:px-3 py-3 md:py-4 gap-4 items-center justify-center md:flex-col rounded-xl transition-transform',
-    ' border border-gray-300 dark:border-gray-600',
+    'border border-gray-300 dark:border-gray-600',
     'bg-black/5 dark:bg-white/10 backdrop-blur-md md:backdrop-blur-sm text-gray-800 dark:text-gray-50;'
   )}
 >
   <Tooltip label="Home">
-    <a href="/" data-shortcut-item class="text-inherit dark:text-inherit">
+    <a href="/" data-shortcut-item>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"

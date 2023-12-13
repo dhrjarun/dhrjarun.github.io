@@ -1,0 +1,27 @@
+---
+
+---
+
+<div class="three-col-layout">
+  <slot />
+</div>
+
+<style is:global>
+  .three-col-layout {
+    display: grid;
+    grid-template-columns: 1fr minmax(16ch, 65ch) 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 'left center right';
+    align-items: start;
+  }
+  .three-col-layout > .left {
+    grid-area: left;
+  }
+  .three-col-layout > .right {
+    grid-area: right;
+  }
+  .three-col-layout > .center {
+    grid-area: center;
+    @apply px-4;
+  }
+</style>

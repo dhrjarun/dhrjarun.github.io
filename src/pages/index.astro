@@ -1,5 +1,9 @@
 ---
-import Layout from '../layouts/BaseLayout.astro';
+import Page from '../components/Page.astro';
+import PageHeading from '../components/PageHeading.astro';
+import PageTitle from '../components/PageTitle.astro';
+import ThreeColumnLayout from '../components/ThreeColumnLayout.astro';
+
 // TODO
 // find font
 // improve shortcut design
@@ -8,15 +12,20 @@ import Layout from '../layouts/BaseLayout.astro';
 // add giscus
 ---
 
-<Layout title="dhrjarun">
-  <main class="">
-    <div class="pb-8">
-      <h1>dhrjarun</h1>
-    </div>
-    <p class="text-sm">
-      Hey, thanks for visiting! I haven't finished this site yet. Till then you can checkout my <a
-        href="/writing">blogs</a
-      >
-    </p>
-  </main>
-</Layout>
+<Page title="dhrjarun">
+  <ThreeColumnLayout>
+    <main class="center">
+      <PageHeading>
+        <PageTitle>dhrjarun</PageTitle>
+      </PageHeading>
+
+      <p class="text-sm">
+        Hey, thanks for visiting! I haven't finished this site yet. Till then you can checkout my <a
+          href="/writing">blogs</a
+        >
+      </p>
+    </main>
+  </ThreeColumnLayout>
+</Page>
+
+<script></script>

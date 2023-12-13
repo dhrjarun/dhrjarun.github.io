@@ -1,0 +1,29 @@
+---
+import type { MarkdownHeading } from 'astro';
+import { generateToC } from './generate-toc';
+import TableOfContentsList from './TableOfContentList.astro';
+
+const { label, headings, ...opts } = Astro.props;
+interface Props {
+  label: string;
+  headings: MarkdownHeading[];
+  minHeadingLevel?: number;
+  maxHeadingLevel?: number;
+}
+
+const { minHeadingLevel = 2, maxHeadingLevel = 6 } = opts;
+const toc = generateToC(headings, { minHeadingLevel, maxHeadingLevel });
+---
+
+{
+  toc.length > 0 ? (
+    <arun-toc data-min-h={minHeadingLevel} data-max-h={maxHeadingLevel}>
+      <nav aria-labelledby="on-this-page">
+        <h2 id="on-this-page">{label}</h2>
+        <TableOfContentsList toc={toc} />
+      </nav>
+    </arun-toc>
+  ) : null
+}
+
+<script src="./arun-toc"></script>

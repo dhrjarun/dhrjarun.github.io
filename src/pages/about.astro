@@ -1,11 +1,18 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import Page from '../components/Page.astro';
+import PageHeading from '../components/PageHeading.astro';
+import PageTitle from '../components/PageTitle.astro';
+import ThreeColumnLayout from '../components/ThreeColumnLayout.astro';
 ---
 
-<BaseLayout title="Contact">
-  <main class="">
-    <div class="pb-8">
-      <h1 class="pb-1.5">About Me</h1>
-    </div>
-  </main>
-</BaseLayout>
+<Page title="Contact">
+  <ThreeColumnLayout>
+    <main class="center">
+      <PageHeading>
+        <PageTitle>About Me</PageTitle>
+      </PageHeading>
+
+      <p></p>
+    </main>
+  </ThreeColumnLayout>
+</Page>

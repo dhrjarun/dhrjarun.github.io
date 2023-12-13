@@ -1,0 +1,64 @@
+---
+import ShortcutBar from './ShortcutBar.astro';
+type Props = {
+  title: string;
+};
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title} - dhrjarun</title>
+  </head>
+  <body>
+    <ShortcutBar />
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  :root {
+  }
+
+  @media (hover: none) {
+    [role='tooltip'] {
+      display: none;
+    }
+  }
+
+  body {
+    font-family: system-ui, sans-serif;
+    @apply bg-white dark:bg-slate-800 text-slate-800 dark:text-white;
+    @apply min-h-screen overflow-x-hidden;
+  }
+
+  a {
+    @apply underline text-blue-500 dark:text-blue-300;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-bold text-gray-600 dark:text-gray-300;
+  }
+  h1 {
+    @apply text-xl sm:text-2xl leading-tight;
+  }
+
+  h2 {
+    @apply text-lg;
+  }
+
+  p {
+    @apply p-0;
+  }
+</style>

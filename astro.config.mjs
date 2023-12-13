@@ -14,4 +14,5 @@ export default defineConfig({
     remarkPlugins: [remarkReadingTime],
     rehypePlugins: [remarkParse, rehypeStringify],
   },
+  output: 'hybrid',
 });
