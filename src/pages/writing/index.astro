@@ -7,8 +7,10 @@ import PageTitle from '../../components/PageTitle.astro';
 
 
 const publishedBlogEntries = await getCollection('writing', ({ data }) => {
-  return data.draft !== true;
+  return data.draft !== true && data.archive !== true;
 });
+
+publishedBlogEntries.sort((after, before) => before.data.publishDate.getTime() - after.data.publishDate.getTime()) 
 ---
 
 <Page title="Posts">
