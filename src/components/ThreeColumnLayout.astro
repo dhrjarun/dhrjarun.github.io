@@ -1,8 +1,9 @@
 ---
-
+import clsx from 'clsx';
+const { class: className, ...rest } = Astro.props;
 ---
 
-<div class="three-col-layout">
+<div class={clsx(className, 'three-col-layout')} {...rest}>
   <slot />
 </div>
 

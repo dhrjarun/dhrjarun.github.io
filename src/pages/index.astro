@@ -3,6 +3,8 @@ import Page from '../components/Page.astro';
 import PageHeading from '../components/PageHeading.astro';
 import PageTitle from '../components/PageTitle.astro';
 import ThreeColumnLayout from '../components/ThreeColumnLayout.astro';
+import WritingContent from '../components/WritingContent.astro';
+import BlankLink from '../components/BlankLink.astro';
 
 // TODO
 // find font
@@ -18,13 +20,22 @@ import ThreeColumnLayout from '../components/ThreeColumnLayout.astro';
         <PageTitle>dhrjarun</PageTitle>
       </PageHeading>
 
-      <p class="text-sm">
-        Hey, thanks for visiting! I haven't finished this site yet. Till then you can checkout my <a
-          href="/writing">blogs</a
-        >
-      </p>
+      <WritingContent>
+        <p>
+          Hey, I am Dhiraj, You can also call me Arun. Thanks for visiting! I mostly code and when I
+          get bored of it, I watch movies, sometimes I draw too(I love perspective drawing). Lately,
+          I've been studying maths, finding people like me and exchanging few words with them.
+        </p>
+
+        <p>I write sometimes, mostly about my experience as a developer and as a human.</p>
+      </WritingContent>
+
+      <div class="space-x-4 text-sm">
+        <a href="/about">About</a>
+        <a href="/writing">Writing</a>
+        <BlankLink href="https://x.com/dhrjarun">X</BlankLink>
+        <BlankLink href="https://github.com/dhrjarun">GitHub</BlankLink>
+      </div>
     </main>
   </ThreeColumnLayout>
 </Page>
-
-<script></script>
