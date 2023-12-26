@@ -1,10 +1,9 @@
 ---
 import Page from '../components/Page.astro';
-import PageHeading from '../components/PageHeading.astro';
-import PageTitle from '../components/PageTitle.astro';
 import ThreeColumnLayout from '../components/ThreeColumnLayout.astro';
 import WritingContent from '../components/WritingContent.astro';
 import BlankLink from '../components/BlankLink.astro';
+import PrimaryHeader from '../components/PrimaryHeader.astro';
 
 // TODO
 // find font
@@ -15,27 +14,32 @@ import BlankLink from '../components/BlankLink.astro';
 
 <Page title="dhrjarun">
   <ThreeColumnLayout>
-    <main class="center">
-      <PageHeading>
-        <PageTitle>dhrjarun</PageTitle>
-      </PageHeading>
+    <div class="center">
+      <PrimaryHeader activeURL="/" />
 
-      <WritingContent>
-        <p>
-          Hey, I am Dhiraj, You can also call me Arun. Thanks for visiting! I mostly code and when I
-          get bored of it, I watch movies, sometimes I draw too(I love perspective drawing). Lately,
-          I've been studying maths, finding people like me and exchanging few words with them.
-        </p>
+      <section class="p-3 border border-gray-300 dark:border-gray-600 rounded-md mb-8">
+        <div class="text-sm text-gray-400 dark:text-gray-400 flex space-x-3 mb-2">
+          <span>25 dec, 2023</span>
+          <span>@dhrjarun</span>
+        </div>
+        <WritingContent>
+          <p>
+            Hi, I am Dhiraj, You can also call me Arun. Thanks for visiting! I mostly code and when
+            I get bored of it, I watch movies, sometimes I draw too(I love perspective drawing).
+            Lately, I've been studying maths, finding people like me and exchanging few words with
+            them. Feel free to <a href="mailto:dhrjarun@gmail.com">contact</a> me I'll be happy to
+            chat.
+          </p>
 
-        <p>I write sometimes, mostly about my experience as a developer and as a human.</p>
-      </WritingContent>
+          <p>I write sometimes, mostly about my experience as a developer and as a human.</p>
+        </WritingContent>
 
-      <div class="space-x-4 text-sm">
-        <a href="/about">About</a>
-        <a href="/writing">Writing</a>
-        <BlankLink href="https://x.com/dhrjarun">X</BlankLink>
-        <BlankLink href="https://github.com/dhrjarun">GitHub</BlankLink>
-      </div>
-    </main>
+        <div class="space-x-4 text-sm">
+          <a href="/about">About</a>
+          <BlankLink href="https://x.com/dhrjarun">X</BlankLink>
+          <BlankLink href="https://github.com/dhrjarun">GitHub</BlankLink>
+        </div>
+      </section>
+    </div>
   </ThreeColumnLayout>
 </Page>

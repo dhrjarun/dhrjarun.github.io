@@ -1,5 +1,6 @@
 ---
-import ShortcutBar from './ShortcutBar.astro';
+import Tooltip from './tooltip/tooltip.astro';
+import ThemeToggler from './ThemeToggler.astro';
 type Props = {
   title: string;
 };
@@ -20,7 +21,11 @@ const { title } = Astro.props;
     <title>{title} - dhrjarun</title>
   </head>
   <body>
-    <ShortcutBar />
+    <div class="fixed bottom-4 right-4">
+      <Tooltip label="Toggle Theme">
+        <ThemeToggler class="bg-gray-200 dark:bg-gray-700 p-1.5 rounded-full" />
+      </Tooltip>
+    </div>
     <slot />
   </body>
 </html>
@@ -42,7 +47,7 @@ const { title } = Astro.props;
   }
 
   a {
-    @apply underline text-blue-500 dark:text-blue-300;
+    @apply text-blue-500 dark:text-blue-300 hover:underline;
   }
 
   h1,

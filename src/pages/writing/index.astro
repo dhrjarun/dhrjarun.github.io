@@ -2,28 +2,25 @@
 import { getCollection } from 'astro:content';
 import Page from '../../components/Page.astro';
 import ThreeColumnLayout from '../../components/ThreeColumnLayout.astro';
-import PageHeading from '../../components/PageHeading.astro';
-import PageTitle from '../../components/PageTitle.astro';
+import PrimaryHeader from '../../components/PrimaryHeader.astro';
 
 
-const publishedBlogEntries = await getCollection('writing', ({ data }) => {
+const publishedWritingEntries = await getCollection('writing', ({ data }) => {
   return data.draft !== true && data.archive !== true;
 });
 
-publishedBlogEntries.sort((after, before) => before.data.publishDate.getTime() - after.data.publishDate.getTime()) 
+publishedWritingEntries.sort((after, before) => before.data.publishDate.getTime() - after.data.publishDate.getTime()) 
 ---
 
 <Page title="Posts">
   <ThreeColumnLayout >
     <div class="center">
-      <PageHeading>
-        <PageTitle>Writing</PageTitle>
-      </PageHeading>
+      <PrimaryHeader activeURL="/writing" />
 
       <section class="space-y-2.5 sm:space-y-1">
         <h2 class="mb-3">Recents</h2>
         {
-          publishedBlogEntries.map((item) => (
+          publishedWritingEntries.map((item) => (
             <div class="flex items-baseline flex-col sm:flex-row">
               <p class="text-xs mr-4">
                 {item.data.publishDate
