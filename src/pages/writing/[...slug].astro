@@ -8,6 +8,8 @@ import ThreeColumnLayout from '../../components/ThreeColumnLayout.astro';
 import PageHeading from '../../components/PageHeading.astro';
 import PageTitle from '../../components/PageTitle.astro';
 
+export const prerender = true;
+
 // 1. Generate a new path for every collection entry
 export async function getStaticPaths() {
   const writingEntries = await getCollection('writing');
@@ -53,10 +55,10 @@ const { title, publishDate } = entry.data;
       </Sidebar>
     </aside>
   </ThreeColumnLayout>
-
-  <style is:global>
-    .sidebar {
-      @apply fixed top-20 pl-5;
-    }
-  </style>
 </Page>
+
+<style is:global>
+  .sidebar {
+    @apply fixed top-20 pl-5;
+  }
+</style>
