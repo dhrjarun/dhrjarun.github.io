@@ -1,0 +1,34 @@
+import Page from '../components/Page.astro';
+import PageHeading from '../components/PageHeading.astro';
+import PageTitle from '../components/PageTitle.astro';
+import ThreeColumnLayout from '../components/ThreeColumnLayout.astro';
+import WritingContent from '../components/WritingContent.astro';
+
+export const prerender = true;
+
+<Page title="Now">
+  <ThreeColumnLayout>
+    <main class="center">
+      <PageHeading>
+        <a class="text-sm" href="/">Back to Home</a>
+        <PageTitle>Now</PageTitle>
+      </PageHeading>
+      <WritingContent>
+
+Well, right now my primary work is to build the first version of a [project](http://localhost:4321/writing/20224-01-11-being-productive-as-a-developer), which I will talk about later.
+
+Besides that, I am studying linear algebra with Gilbert Strang, watching his lectures, sometimes reading his book. I am halfway through the course and will be publishing my notes here. I am also studying calculus through Professor Leonard's lectures and a book by James Stewart. For calculus and linear algebra, I have found the best resources, but I can’t say the same for probability. I loved some of the [videos](https://youtube.com/playlist?list=PLiAulSm0XXgvCGe63mrAkda9UQ9478YQv&si=JxTC76PzFDaJgUm8) by 3blue1brown on it. I tried books like 'A First Course in Probability', 'The Art of Probability' and [Jaynes' book](http://www.med.mcgill.ca/epidemiology/hanley/bios601/GaussianModel/JaynesProbabilityTheory.pdf), the [MIT OpenCourseWare](https://youtube.com/playlist?list=PLUl4u3cNGP60hI9ATjSFgLZpbNJ7myAg6&si=0xrn0PNovpgU1xYY) is good too, but none are quite right for me.
+
+I have been reading a book on the [history of computers by Walter Isaacson](https://www.goodreads.com/en/book/show/21856367), which I find interesting and plan to finish. Last year, I was reading 'The Fabric of Reality' by David Deutsch. While reading it, I found myself quite interested in epistemology and rationality. So, I began reading more about it, read 2 chapters of 'The Logic of Scientific Discovery' by Karl Popper, which I find hard to read. I've read some [LessWrong](lesswrong.com) blogs and listened to Eliezer Yudkowsky’s '[Harry Potter and the Methods of Rationality](https://hpmor.com/)'. It has changed my way of thinking. All these people call the same concept by different names: David Deutsch calls it explanation, philosophers call it epistemology, Elon Musk likes to say thinking by first principles, Eliezer Yudkowsky says 'rationality.' Reading these materials made me interested in maths and physics, that's why I began learning probability.
+
+When I get bored or feel sad, I watch movies. I love all the movies by Tarantino, he is my favorite director. It’s sad that he will only be making 10 movies in his life and 9 have already been made. Since I have watched all his movies, I am watching those he has [recommended](https://letterboxd.com/stephenbush/list/quentin-tarantinos-favorite-movies-45-films/). Till now I have watched: 'The Texas Chain Saw Massacre' — this one is my favorite, I have made many of my friends watch this with me, 'Young Frankenstein', 'The Good, the Bad and the Ugly' — I love this, I became a fan of Sergio Leone after this, 'Unfaithfully Yours', 'Dunkirk', 'Battle Royale', 'Dogville' — what a depressing movie it is, but I loved every minute of it, 'The Wild Bunch'.
+
+In late 2023, I built this personal site, so I am trying to write a couple of times a week here.
+
+I know this is a lot, but I am not doing everything every day, nor have I made any goal for these. Only the primary work of mine matters the most, the rest are for fun."
+
+</WritingContent>
+</main>
+
+  </ThreeColumnLayout>
+</Page>
