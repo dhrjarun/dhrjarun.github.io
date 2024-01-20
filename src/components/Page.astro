@@ -2,6 +2,7 @@
 import { ViewTransitions } from 'astro:transitions';
 import Tooltip from './tooltip/tooltip.astro';
 import ThemeToggler from './ThemeToggler.astro';
+import Footer from './Footer.astro';
 type Props = {
   title: string;
   description?: string;
@@ -31,6 +32,8 @@ const { title, description = '' } = Astro.props;
       <!-- </Tooltip> -->
     </div>
     <slot />
+    <Footer />
+
     <style is:global>
       :root {
       }
