@@ -89,7 +89,6 @@ function MakeFetchApiHandler({
 }) {
   const tinaBackendHandler: FetchApiHandler = async (context) => {
     const { request } = context;
-    const res: ResponseInit = {};
 
     // remove leading slash
     const path = request.url?.startsWith('/') ? request.url.slice(1) : request.url;

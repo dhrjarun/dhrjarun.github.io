@@ -138,6 +138,7 @@ const AuthJsBackendAuthProvider = ({ authOptions }: { authOptions: AuthConfig })
         secure: false,
 
         handler: async (context, opts) => {
+          // return new Response('hello', { status: 200 });
           const { request } = context;
           // The domain is not important here, we just need to parse the pathName
           const url = new URL(request.url, `http://${request.headers.get('host') || 'localhost'}`);
@@ -151,7 +152,7 @@ const AuthJsBackendAuthProvider = ({ authOptions }: { authOptions: AuthConfig })
           // @ts-ignore
           //   req.query.nextauth = authSubRoutes;
 
-          return AstroAuth(authOptions, opts?.basePath).POST(context) as any;
+          return AstroAuth(authOptions).POST(context) as any;
         },
       },
     },

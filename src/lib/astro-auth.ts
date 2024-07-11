@@ -61,7 +61,10 @@ function AstroAuthHandler(prefix: string, options: AuthConfig) {
         res.headers.delete('Set-Cookie');
       }
     }
+
+    // console.log('res', prefix);
     return res;
+    // return new Response(`${action} `);
   };
 }
 
