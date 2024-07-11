@@ -5,7 +5,7 @@ import remarkParse from 'remark-parse';
 import rehypeStringify from 'rehype-stringify';
 import { remarkReadingTime } from './remark-reading-time.mjs';
 
-import vercel from "@astrojs/vercel/serverless";
+import vercel from '@astrojs/vercel/serverless';
 
 // https://astro.build/config
 export default defineConfig({
@@ -14,12 +14,12 @@ export default defineConfig({
   base: '/',
   markdown: {
     remarkPlugins: [remarkReadingTime],
-    rehypePlugins: [remarkParse, rehypeStringify]
+    rehypePlugins: [remarkParse, rehypeStringify],
   },
-  output: "server",
+  output: 'server',
   adapter: vercel({
     webAnalytics: {
       enabled: true,
     },
-  })
+  }),
 });
