@@ -1,40 +1,46 @@
 ---
-import { getCollection } from 'astro:content';
 import Page from '../../components/Page.astro';
 import ThreeColumnLayout from '../../components/ThreeColumnLayout.astro';
 import PrimaryHeader from '../../components/PrimaryHeader.astro';
+import { client as tinaClient } from '../../../tina/__generated__/client';
 
-
-const publishedWritingEntries = await getCollection('writing', ({ data }) => {
-  return data.draft !== true && data.archive !== true;
+const writingsConnection = await tinaClient.queries.writingsConnection(
+  {
+    filter: { draft: { eq: false } },
+  }
+);
+const writings = writingsConnection.data.writingsConnection.edges?.map((writing) => {
+  return {
+    slug: writing?.node?._sys.filename,
+    title: writing?.node?.title,
+    publishDate: writing?.node?.publishDate ?  new Date(writing?.node?.publishDate ) : undefined!,
+  };
 });
 
-publishedWritingEntries.sort((after, before) => before.data.publishDate.getTime() - after.data.publishDate.getTime()) 
+
+writings?.sort((after, before) => before.publishDate?.getTime() - after.publishDate?.getTime())
 ---
 
 <Page title="Posts">
-  <ThreeColumnLayout >
+  <ThreeColumnLayout>
     <div class="center">
       <PrimaryHeader activeURL="/writing" />
 
       <section class="space-y-2.5 sm:space-y-1">
         <h2 class="mb-3">Recents</h2>
         {
-          publishedWritingEntries.map((item) => (
-            <div class="flex items-baseline flex-col sm:flex-row">
-              <p class="text-xs mr-4">
-                {item.data.publishDate
-                  .toLocaleDateString('en-in', {
+            writings?.map((item) => (<div class="flex items-baseline flex-col sm:flex-row">
+             <p class="text-xs mr-4">
+                {item.publishDate?.toLocaleDateString('en-in', {
                     year: 'numeric',
                     month: '2-digit',
                     day: '2-digit',
                   }).split('/').reverse().join('-')}
                 {}
               </p>
-              <a href={`/writing/${item.slug}`}>{item.data.title}</a>{' '}
-            </div>
-          ))
-        }
+              <a href={`/writing/${item.slug}`}>{item.title}</a>{' '}
+            </div>))
+          }
       </section>
     </div>
   </ThreeColumnLayout>
