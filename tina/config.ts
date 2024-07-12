@@ -6,16 +6,17 @@ const branch =
   process.env.GITHUB_BRANCH || process.env.VERCEL_GIT_COMMIT_REF || process.env.HEAD || 'main';
 
 const isLocal = process.env.TINA_PUBLIC_IS_LOCAL === 'true';
+// const isLocal = true;
 
 export default defineConfig({
   authProvider: isLocal ? new LocalAuthProvider() : new UsernamePasswordAuthJSProvider(),
-  branch,
-  contentApiUrlOverride: '/api/tina/gql',
 
   // Get this from tina.io
   clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
   // Get this from tina.io
   token: process.env.TINA_TOKEN,
+
+  branch,
 
   build: {
     outputFolder: 'admin',
