@@ -1,10 +1,10 @@
 import type { Collection, Form, TinaCMS } from 'tinacms';
 
 const Writings: Collection = {
-  name: 'writings',
-  label: 'Writings',
-  path: 'content/writings',
-  format: 'mdx',
+  name: 'writing',
+  label: 'Writing',
+  path: 'Writing',
+  format: 'md',
   defaultItem() {
     return {
       title: 'New Post',

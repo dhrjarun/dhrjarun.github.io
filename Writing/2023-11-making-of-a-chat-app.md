@@ -7,16 +7,7 @@ archive: false
 
 ## Introduction
 
-Once upon a time, I built a web application, I call it [BlindBird](https://github.com/dhrjarun/BlindBird/). Do you know why? It was a chatting app where you could search someone by twitter username and if the person is registered, you can message them anonymously. Here’s a little demo of it.
-
-<iframe
-  class="w-full aspect-video"
-  src="https://www.youtube.com/embed/Ojf3QUMvWh4?si=QsZwm3YK7h0-r1Bc"
-  title="YouTube video player"
-  frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-  allowfullscreen
-></iframe>
+Once upon a time, I built a web application, I call it [BlindBird](https://github.com/dhrjarun/BlindBird/). Do you know why? It was a chatting app where you could search someone by twitter username and if the person is registered, you can message them anonymously. Here’s a little [demo](https://youtu.be/Ojf3QUMvWh4?si=B5byMF_qf1ylau5v) of it.
 
 This was the first time, I completed a whole project all by myself. I got the confidence and started seeing myself as a true developer. I share the project on twitter people liked the [tweet](https://x.com/dhrjarun/status/1574036502627188736?s=20) and some DMed me asking how I built it. But nobody from twitter signed up for it. I was bit sad, then one of my school friend signed up; he actually made an account on twitter for that. I would like to thank him. And we chatted on it. It was amazing; chatting on system I designed, I built and I deployed. I loved the experience.
 

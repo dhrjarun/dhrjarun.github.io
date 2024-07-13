@@ -16,11 +16,11 @@ export const prerender = true;
 
 // 1. Generate a new path for every collection entry
 export async function getStaticPaths() {
-  const writingsConnection = await tinaClient.queries.writingsConnection({
+  const writingsConnection = await tinaClient.queries.writingConnection({
     filter: { draft: { eq: false } },
   });
 
-  const writings = writingsConnection.data.writingsConnection.edges?.map((writing) => {
+  const writings = writingsConnection.data.writingConnection.edges?.map((writing) => {
     return {
       params: { slug: writing?.node?._sys.filename },
       props: {
