@@ -1,6 +1,6 @@
 import type { Collection, Form, TinaCMS } from 'tinacms';
 
-const Writings: Collection = {
+const WritingCollection: Collection = {
   name: 'writing',
   label: 'Writing',
   path: 'Writing',
@@ -8,7 +8,7 @@ const Writings: Collection = {
   defaultItem() {
     return {
       title: 'New Post',
-      draft: true,
+      draft: false,
       archive: false,
       publishDate: new Date().toISOString(),
     };
@@ -76,7 +76,7 @@ const Writings: Collection = {
   ],
 };
 
-export default Writings;
+export default WritingCollection;
 
 function getSlug(values: any) {
   const publishDate: Date = values?.publishDate ? new Date(values?.publishDate) : new Date();

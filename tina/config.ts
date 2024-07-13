@@ -1,5 +1,6 @@
 import { defineConfig } from 'tinacms';
-import WritingsCollection from './collection/writings';
+import WritingCollection from './collection/writing';
+import createRootCollection from './collection/root';
 
 // Your hosting provider likely exposes this as an environment variable
 const branch =
@@ -27,6 +28,10 @@ export default defineConfig({
   },
   // See docs on content modeling for more info on how to setup new content models: https://tina.io/docs/schema/
   schema: {
-    collections: [WritingsCollection],
+    collections: [
+      WritingCollection,
+      createRootCollection({ label: 'About', name: 'about', path: '/About' }),
+      createRootCollection({ label: 'Now', name: 'now', path: '/Now' }),
+    ],
   },
 });
