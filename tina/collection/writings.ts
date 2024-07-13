@@ -10,6 +10,7 @@ const Writings: Collection = {
       title: 'New Post',
       draft: true,
       archive: false,
+      publishDate: new Date().toISOString(),
     };
   },
   ui: {
@@ -23,10 +24,11 @@ const Writings: Collection = {
       values: Record<string, any>;
     }) => {
       if (form.crudType === 'create') {
+        const newPublishDate = new Date().toISOString();
+
         return {
           ...values,
-          publishDate: new Date().toISOString(),
-          // slug: getSlug(values),
+          publishDate: newPublishDate,
         };
       }
     },
@@ -35,6 +37,7 @@ const Writings: Collection = {
       slugify: (values) => {
         return getSlug(values);
       },
+      readonly: true,
     },
   },
   fields: [
@@ -76,10 +79,12 @@ const Writings: Collection = {
 export default Writings;
 
 function getSlug(values: any) {
-  const publishDate: Date = values?.publishDate || new Date();
+  const publishDate: Date = values?.publishDate ? new Date(values?.publishDate) : new Date();
+
+  let year = publishDate.getFullYear();
   let month: string | number = publishDate.getMonth() + 1;
-  month = month < 10 ? `0${publishDate.getMonth()}` : `${month}`;
+  month = month < 10 ? `0${month}` : `${month}`;
 
   // Values is an object containing all the values of the form. In this case it is {title?: string, topic?: string}
-  return `${publishDate.getFullYear}-${month}-${values?.title?.toLowerCase().replace(/ /g, '-')}`;
+  return `${year}-${month}-${values?.title?.toLowerCase().replace(/ /g, '-')}`;
 }
