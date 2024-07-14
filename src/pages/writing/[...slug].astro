@@ -6,6 +6,7 @@ import Sidebar from '../../components/Sidebar.astro';
 import ThreeColumnLayout from '../../components/ThreeColumnLayout.astro';
 import PageHeading from '../../components/PageHeading.astro';
 import PageTitle from '../../components/PageTitle.astro';
+import GiscusComments from '../../components/GiscusComments.astro';
 import { TinaMarkdown } from 'tinacms/dist/rich-text';
 import { client as tinaClient } from '../../../tina/__generated__/client';
 
@@ -62,6 +63,9 @@ const { title, publishDate, body } = Astro.props;
         <TinaMarkdown content={body} />
         <!-- <Content /> -->
       </WritingContent>
+
+      <div class="text-center my-8">..............................................</div>
+      <GiscusComments />
     </main>
     <aside class="right">
       <Sidebar>
