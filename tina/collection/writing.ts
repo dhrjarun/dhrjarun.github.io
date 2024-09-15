@@ -37,7 +37,6 @@ const WritingCollection: Collection = {
       slugify: (values) => {
         return getSlug(values);
       },
-      readonly: true,
     },
   },
   fields: [
