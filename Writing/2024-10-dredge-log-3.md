@@ -5,7 +5,7 @@ draft: false
 archive: false
 ---
 
-## Before 13 April, 24
+## Before 13 Oct, 24
 
 As discussed in the last [dredge-log](https://dhrjarun.com/writing/2024-09-dredge-log-2) that I'll be contacting 100 people actually I failed to do so and in fact I am changing my strategy. Why did I quit on this particular way? The reason might be I find it hard for me, I tend to procrastinate, it drains me.
 
@@ -15,7 +15,7 @@ I am not the best person to carry out the process of cold outreach. There were o
 
 There are few projects like Valibot, tanstack/query which could be used with Dredge, but for that I have to write some code. These project sometime have a page where they list project which could be used together. People will know about Dredge, if it is listed on their favorite tool page.
 
-## This Week - after 13 April, 24
+## This Week - after 13 Oct, 24
 
 This week, I added support for Valibot and Arktype. I contacted creator of Arktype on discord and he and one other contributor help me with that. I think from those message in their server, few people visited my GitHub and now there are 7 stars. I forget to mention that 2 stars would have came from a [reply to Artem tweet](https://x.com/dhrjarun/status/1845858424111661360) on X. I have been trying to tweet everyday on X, about my work on the project. Tweeted that "now my project support Valibot" and creator of Valibot liked and followed me back.
 
