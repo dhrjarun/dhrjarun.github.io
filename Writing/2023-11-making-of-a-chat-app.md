@@ -4,7 +4,6 @@ publishDate: 2023-11-30
 draft: false
 archive: false
 ---
-
 ## Introduction
 
 Once upon a time, I built a web application, I call it [BlindBird](https://github.com/dhrjarun/BlindBird/). Do you know why? It was a chatting app where you could search someone by twitter username and if the person is registered, you can message them anonymously. Here’s a little [demo](https://youtu.be/Ojf3QUMvWh4?si=B5byMF_qf1ylau5v) of it.

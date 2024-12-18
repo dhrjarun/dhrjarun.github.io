@@ -1,3 +1,0 @@
-{
-  "extends": ["arun", "arun/typescript", "arun/react"]
-}

@@ -1,0 +1,186 @@
+{
+  "main": {
+    "id": "157122eaac795630",
+    "type": "split",
+    "children": [
+      {
+        "id": "6a0fa271d4226f8d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d8d371d467828c58",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Now/2024-08-30.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2024-08-30"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "3bba5511f48d597a",
+    "type": "split",
+    "children": [
+      {
+        "id": "e254367517e7f237",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d0c160c05728bfce",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "3e2f90e2812572b6",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "740e6662e9899cdc",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "b7a1a8853d00e305",
+    "type": "split",
+    "children": [
+      {
+        "id": "05137aa28e880e51",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7285485159baf81c",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Now/2024-08-30.md",
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for 2024-08-30"
+            }
+          },
+          {
+            "id": "3958953bbce8e4d0",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Now/2024-08-30.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from 2024-08-30"
+            }
+          },
+          {
+            "id": "1438e6c2b8370f3a",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "3210888273b49d22",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Now/2024-08-30.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of 2024-08-30"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "d8d371d467828c58",
+  "lastOpenFiles": [
+    "Now/2024-07-13.md",
+    "Now/2024-01-20.md",
+    "Writing/2024-09-beginning-to-market-dredge.md",
+    "Writing/2024-07-video-games.md",
+    "Writing/2024-01-being-productive-as-a-developer.md",
+    "About/2024-01-11.md",
+    "Now/2024-08-30.md",
+    "README.md",
+    "Writing/2024-10-dredge-log-3.md",
+    "Writing/2024-08-i-built-my-dream---dredge.md",
+    "Writing/2024-07-integrating-cms-to-my-blog.md",
+    "Writing/2023-10-am-i-burnout.md",
+    "Writing/2022-12-my-4-months-journey-in-opensource.md",
+    "Writing/2024-07-making-comprosmise-with-the-problem.md",
+    "Writing/2024-09-dredge-log-2.md",
+    "Writing/2024-09-can-i-spread-the-word.md",
+    "Writing/2024-07-way-to-improve-my-writing.md",
+    "Writing/2023-11-making-of-a-chat-app.md"
+  ]
+}
