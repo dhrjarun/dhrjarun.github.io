@@ -13,4 +13,4 @@ I have this domain dhrjarun.com which cost couple of bucks each year. For backup
 
 I have an issue with TinaCMS, right now while writing, if I go back( previous page) by mistake, all my written data will be lost. It does not even warn me (do not show the alert dialog) to whether you really want to go back. It would have been great, if it has an auto-save mechanism to the local storage. Till now I'll have to be extra cautious.
 
-Due to this I considered building a plugin for obsidian which could work as local CMS, but I have to focus on [my primary project](https://dhrjarun.com/now/2024-07-13) .
+Due to this I considered building a plugin for obsidian which could work as local CMS, but I have to focus on [my primary project](../Now/2024-07-13) .

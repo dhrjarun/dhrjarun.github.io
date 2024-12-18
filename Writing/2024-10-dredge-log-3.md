@@ -7,7 +7,7 @@ archive: false
 
 ## Before 13 Oct, 24
 
-As discussed in the last [dredge-log](https://dhrjarun.com/writing/2024-09-dredge-log-2) that I'll be contacting 100 people actually I failed to do so and in fact I am changing my strategy. Why did I quit on this particular way? The reason might be I find it hard for me, I tend to procrastinate, it drains me.
+As discussed in the last [dredge-log](./2024-09-dredge-log-2) that I'll be contacting 100 people actually I failed to do so and in fact I am changing my strategy. Why did I quit on this particular way? The reason might be I find it hard for me, I tend to procrastinate, it drains me.
 
 I had various sources through which I found couple of developers who seem to be Typescript enthusiast. But i was afraid how would they respond, am I spamming them? Previously when I contacted few people for their advice or to ask a question most of them responded, but now when I asking them to try something I built nobody cares to send me a reply. Maybe this is not how an OSS project should be marketed.
 
