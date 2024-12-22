@@ -1,0 +1,11 @@
+{
+  "includeFolders": [
+    "Writing"
+  ],
+  "useHeader": true,
+  "useFirstLine": false,
+  "isTitleHidden": true,
+  "supportYAML": true,
+  "charCount": 50,
+  "checkInterval": 500
+}
