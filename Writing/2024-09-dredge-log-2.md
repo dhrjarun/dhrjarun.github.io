@@ -1,6 +1,6 @@
 ---
 title: 'Dredge Log #2'
-publishDate: 2024-09-15T13:32:02.107Z
+publishDate: 2024-09-15
 draft: false
 archive: false
 ---

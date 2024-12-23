@@ -1,6 +1,6 @@
 ---
 title: I built my dream - Dredge
-publishDate: 2024-08-30T13:46:34.436Z
+publishDate: 2024-08-30
 draft: false
 archive: false
 ---

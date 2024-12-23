@@ -1,6 +1,6 @@
 ---
 title: Making comprosmise with the problem
-publishDate: 2024-07-16T12:26:46.303Z
+publishDate: 2024-07-16
 draft: false
 archive: false
 ---

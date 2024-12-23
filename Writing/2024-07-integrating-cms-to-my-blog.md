@@ -1,6 +1,6 @@
 ---
 title: integrating CMS to my blog
-publishDate: 2024-07-11T18:30:00.000Z
+publishDate: 2024-07-11
 draft: false
 archive: false
 ---

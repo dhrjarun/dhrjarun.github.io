@@ -1,6 +1,6 @@
 ---
 title: Dredge Log 3
-publishDate: 2024-10-19T04:43:35.619Z
+publishDate: 2024-10-19
 draft: false
 archive: false
 ---

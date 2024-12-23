@@ -1,6 +1,6 @@
 ---
 title: A Way to improve my writing
-publishDate: 2024-07-13T14:22:35.676Z
+publishDate: 2024-07-13
 draft: false
 archive: false
 ---

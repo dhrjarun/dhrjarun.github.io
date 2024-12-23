@@ -1,6 +1,6 @@
 ---
 title: Can I spread the word?
-publishDate: 2024-09-15T04:50:35.062Z
+publishDate: 2024-09-15
 draft: false
 archive: false
 ---

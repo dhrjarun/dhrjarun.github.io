@@ -1,6 +1,6 @@
 ---
 title: 'Beginning to market Dredge - Dredge Log #1'
-publishDate: 2024-09-08T05:14:55.169Z
+publishDate: 2024-09-08
 draft: false
 archive: false
 ---

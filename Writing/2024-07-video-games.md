@@ -1,6 +1,6 @@
 ---
 title: Video Games
-publishDate: 2024-07-15T14:27:51.531Z
+publishDate: 2024-07-15
 draft: true
 archive: false
 ---
