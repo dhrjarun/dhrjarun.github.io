@@ -1,6 +1,6 @@
 ---
 title: Migrating from TinaCMS to Obsidian
-publishDate: 
+publishDate: 2024-12-30
 draft: false
 archive: false
 ---
