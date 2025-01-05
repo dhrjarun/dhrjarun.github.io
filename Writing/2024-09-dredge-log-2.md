@@ -1,5 +1,5 @@
 ---
-title: 'Dredge Log #2'
+title: Dredge Log #2
 publishDate: 2024-09-15
 draft: false
 archive: false
