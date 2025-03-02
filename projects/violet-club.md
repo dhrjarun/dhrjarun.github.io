@@ -11,9 +11,11 @@ I love playing ludo, if you do not it is because you're not playing with the rig
 
 There are a lot of ludo game on mobiles out there. Almost all of them are cluttered with useless feature, ads, gambling.
 
-Right now the project is in prototype phase, currently building the web app which will become PWA. I am using react so that later on, I can utitlise some component to build a react native app. 
+Right now, you can play the game both offline and online but there are so may big and small things to be added. It is PWA so can be installed as app. I am using react so that later on, I can utilise same components to build a react native app. 
 
-As for the multiplayer aspect of things, I do not have money to throw at it, so I am using either webRTC (thought of using firebase relatime db at one point) When using webRTC, player could cheat but that would not be a big deal because i want it to be played my family and friends and anyway I am making it for myself. 
+As for the multiplayer aspect of things, I do not have money to throw at it, so I am using webRTC (thought of using firebase relatime db at one point) When using webRTC, player could cheat but that would not be a big deal because i want it to be played my family and friends and anyway I am making it for myself. 
+
+
 
 
 

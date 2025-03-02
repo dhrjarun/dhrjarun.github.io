@@ -9,7 +9,7 @@ Back in 2022, I built this chatting app. It is different from your chatting app.
 
 
 ## Related Writing
-- [Making of a Chat App](2023-11-making-of-a-chat-app)
+- [Making of a Chat App](/writing/2023-11-making-of-a-chat-app)
 
 
 

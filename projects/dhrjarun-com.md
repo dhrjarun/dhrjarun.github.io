@@ -9,7 +9,7 @@ This site, you are currently on.
 
 
 ## Related Writing
-- [Integrating CMS to my blog](2024-07-integrating-cms-to-my-blog)
+- [Integrating CMS to my blog](/writing/2024-07-integrating-cms-to-my-blog)
 
 
 
