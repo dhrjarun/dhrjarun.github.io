@@ -4,14 +4,12 @@ start: 2023
 end:
 descriptions: Peronsal site where I blog and post my stuff built with Astro
 ---
-# dhrjarun.com
 
-
-
+This site, you are currently on. 
 
 
 ## Related Writing
-[2024-07-integrating-cms-to-my-blog](2024-07-integrating-cms-to-my-blog)
+- [Integrating CMS to my blog](2024-07-integrating-cms-to-my-blog)
 
 
 
